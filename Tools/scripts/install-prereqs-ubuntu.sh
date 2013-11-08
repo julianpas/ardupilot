@@ -42,7 +42,7 @@ fi
 $APT_GET update
 $APT_GET install $BASE_PKGS $SITL_PKGS $PX4_PKGS
 
-if [ ! -d ../PX4-Firmware ]; then
+if [ ! -d ../PX4Firmware ]; then
     git clone https://github.com/diydrones/PX4Firmware.git
 fi
 
@@ -54,7 +54,7 @@ if [ ! -d ~/gcc-arm-none-eabi-4_6-2012q2 ]; then
     ARM_TARBALL=gcc-arm-none-eabi-4_6-2012q2-20120614.tar.bz2
     (
         cd ~;
-        curl -OL "https://launchpad.net/gcc-arm-embedded/4.6/4.6-2012-q2-update/+download/$ARM_TARBALL";
+        curl --insecure -OL "https://launchpad.net/gcc-arm-embedded/4.6/4.6-2012-q2-update/+download/$ARM_TARBALL";
         tar xjf ${ARM_TARBALL};
         rm ${ARM_TARBALL};
     )
