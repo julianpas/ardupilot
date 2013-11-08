@@ -1,3 +1,18 @@
+# About This Fork
+
+This fork contains a new project type called *ArduPilotIMU* which is not meant for flying any kind of drones!
+
+It is meant to provide the fastest possible IMU stream from the ArduPilot board through MavLink when the
+board is intended to be used as an IMU input for other projects.
+
+The output this project provides is still compatible with the ground control software for the sake of sanity
+checking but all RC communication and decision making tasks needed for flying planes are stripped away.
+
+The ouput is meant to be used with the MavLink ROS node. However the node as it is present in the internet
+will not work because of the different type of raw sensor data sent from from the ArduPilot.
+
+For instructions about how to build and use this thing see the original documentation preserved below!
+
 # ArduPilot Project
 
 You can find lots of development information at the [ArduPilot development site](http://dev.ardupilot.com)
@@ -13,7 +28,7 @@ You can either download the source using the "ZIP" button at the top
 of the github page, or you can make a clone using git:
 
 ```
-git clone git://github.com/diydrones/ardupilot.git
+git clone git://github.com/julianpas/ardupilot.git
 ```
 
 ## Prerequisites
